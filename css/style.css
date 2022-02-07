@@ -197,6 +197,87 @@ nav .menu-links a {
 .step-1 section .icon {
   width: 6rem;
   height: 6rem;
+  box-shadow: 0rem 0rem 4.5rem 0rem #9f9fa0;
+  border-radius: 50%;
+  display: flex;
+}
+.step-1 section .tablet-icon {
+  transform: translate(52vw, 7vh);
+}
+.step-1 section .tablet-icon img {
+  width: 40%;
+  margin: 0 auto;
+  align-self: center;
+}
+.step-1 section .laptop-icon {
+  transform: translate(78vw, 30vh);
+}
+.step-1 section .laptop-icon img {
+  align-self: center;
+  margin: 0 auto;
+  width: 45%;
+}
+.step-1 section .mobile-icon {
+  transform: translate(5vw, 62vh);
+}
+.step-1 section .mobile-icon .img {
+  align-self: center;
+  margin: 0 auto;
+  width: 40%;
+}
+.step-1 section .desktop-icon {
+  transform: translate(30vw, 82vh);
+}
+.step-1 section .desktop-icon .img {
+  align-self: center;
+  margin: 0 auto;
+  width: 60%;
+}
+.step-1 section .sample-image-1 {
+  position: absolute;
+  width: 50%;
+  height: 46%;
+  transform: translate(5%, 10%) scale(0.8);
+}
+.step-1 section .sample-image-1 img {
+  width: 100%;
+}
+.step-1 section .sample-image-2 {
+  position: absolute;
+  z-index: 2;
+  width: 50%;
+  height: 46%;
+  transform: translate(50%, 40%) scale(0.8);
+}
+.step-1 section .sample-image-2 img {
+  width: 100%;
+}
+.step-1 section .sample-image-3 {
+  position: absolute;
+  z-index: 1;
+  width: 50%;
+  height: 46%;
+  transform: translate(95%, 75%) scale(0.8);
+}
+.step-1 section .sample-image-3 img {
+  width: 100%;
+}
+.step-1 section .tick-icon {
+  position: absolute;
+  width: 4.5rem;
+  left: 43vw;
+  top: 22vh;
+  z-index: 2;
+}
+.step-1 section .tick-icon img {
+  width: 100%;
+}
+
+.step-2 {
+  margin-top: 80rem;
+  left: 43vw;
+  top: 22vh;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=style.css.map */
