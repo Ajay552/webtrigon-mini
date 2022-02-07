@@ -1,5 +1,251 @@
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
+
+:root {
+    line-height: 1.15;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 62.5%
 }
+
+nav {
+
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 6;
+    // background-color: red;
+
+    .logo {
+        display: flex;
+        cursor: pointer;
+        text-decoration: none;
+        padding-left: 1rem;
+        align-self: center;
+
+        img {
+            width: 5rem;
+            align-self: center;
+        }
+
+        span {
+            display: block;
+            font-size: 1.4rem;
+            letter-spacing: 0.2rem;
+            color: #1e1e1e;
+            align-self: center;
+            // font-weight: 600;
+        }
+    }
+
+    .hamburger-menu {
+        padding-right: 2rem;
+    }
+
+    .menu-links {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding-top: 10vh;
+        margin-right: 2rem;
+        margin-left: auto;
+        // display: block;
+        background-color: white;
+        
+        a {
+            display: block;
+            font-size: 1.3rem;
+            letter-spacing: 0.1rem;
+            text-decoration: none;
+            width: 80%;
+            padding: 1.5rem 0;
+            color: #1e1e1e;
+            margin: 0 auto;
+        }
+    }
+
+}
+
+.upfold {
+
+    background-image: url("https://mini.webtrigon.com/static-v1.1.0/home/images/animation-components/upfold-bg-1.png");
+    height: auto;
+    background-size: cover;
+    background-position: top;
+    overflow: hidden;
+    position: relative;
+
+    h1 {
+        color: #a6a8ab;
+        text-align: center;
+        width: 70%;
+        margin: 0 auto;
+        line-height: 1.5;
+        padding-top: 15vh;
+        padding-bottom: 7vh;
+        font-size: 2.2rem;
+
+        span {
+            color: #c45c5d;
+            font-size: 2.2rem;
+        }
+    }
+
+    .upfold-image {
+        height: 40vh;
+        overflow: hidden;
+        position: relative;
+    
+        .bg1 {
+    
+            position: absolute;
+            width: 100%;
+            z-index: 2;
+            // left: 0;
+            bottom: 15%;
+            // opacity: 0;
+    
+        }
+        .bg2 {
+            position: absolute;
+            bottom: 18%;
+            width: 100%;
+            z-index: 3;
+        }
+        .bg3 {
+            position: absolute;
+            width: 100%;
+            bottom: 0%;
+            z-index: 4;
+        }
+        .bg4 {
+            position: absolute;
+            width: 90%;
+            bottom: 12%;
+            z-index: 5;
+        }
+    }
+
+    form {
+        width: 88%;
+        height: 6rem;
+        margin: 9vh auto;
+        border: 0.7rem solid #e5e5e7;
+        background-color: #f0f0f0;
+        border-radius: 0.5rem;
+        display: flex;
+
+        input {
+            width: 88%;
+            font-size: 1.2rem;
+            letter-spacing: 0.1rem;
+            padding-left: 2rem;
+            border: 0;
+            color: #a6a8ab;
+            background-color: transparent;
+            // height: 100%;
+        }
+
+        figure {
+            background-color: #c45c5d;
+            width: 14%;
+            display: flex;
+            
+            img {
+                width: 15px;
+                height: 100%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.all-template {
+    background-color: #1e1e1e;
+    background-image: url("https://mini.webtrigon.com/static-v1.1.0/home/images/png/pattern.png");
+    // background-size: 250%;
+    background-position: center;
+    color: #a6a8ab;
+    font-size: 1.6rem;
+    text-align: center;
+
+    p {
+        padding: 3rem 0;
+        width: 80%;
+        margin: 0 auto;
+        line-height: 1.5;
+        font-size: 1.6rem;
+    }
+
+    div {
+        padding-bottom: 2.5rem;
+        font-size: 1.6rem;
+    }
+
+    button {
+        padding: 2rem 0 5rem 0;
+        // font-size: 1.6rem;
+        // border-radius: 4rem;
+        border: none;
+        background: transparent;
+
+        a {
+            font-size: 1.6rem;
+            text-decoration: none;
+            color: white;
+            padding: 1.3rem 1.8rem;
+            background-color: #c45c5d;
+            border-radius: 4rem;
+
+
+
+
+        }
+    }
+}
+.step-1 {
+
+    h3 {
+        font-size: 2.5rem;
+        text-align: center;
+        color: #1b1d1e;
+        padding: 4rem 0;
+        font-weight: 500;
+
+        span {
+            color: #c45c5d;
+            font-size: 2.5rem;
+        }
+    }
+
+    section {
+
+        h4 {
+            font-size: 2rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .icon {
+            width: 6rem;
+            height: 6rem;
+        }
+    }
+
+}
+
+
+

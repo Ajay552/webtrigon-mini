@@ -6,71 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Webtrigon Mini</title>
+    <script src="index.js"></script>
 </head>
 <body>
 
     <nav>
         
-        <a href="https://mini.webtrigon.com/">
+        <a class="logo" href="https://mini.webtrigon.com/">
             <img 
                 src="https://mini.webtrigon.com/static-v1.1.0/common/images/png/logo.png" 
                 alt="logo">
             <span>WEBTRIGON</span>
         </a>
 
-        <a href="">
-            <img src="" alt="hamburger-menu">
-        </a>
+            <a href="javascript:void(0)" class="hamburger-menu" onclick="open()">
+                <!-- <img src="" alt="hamburger-menu"> -->
+                <img src="https://img.icons8.com/external-gradak-royyan-wijaya/24/000000/external-article-basic-interface-iii-gradak-royyan-wijaya-2.png"/>
+            </a>
 
-        <nav>
+        <nav class="menu-links">
             <a href="https://mini.webtrigon.com/">Home</a>
             <a href="https://mini.webtrigon.com/pricing/">Pricing</a>
             <a href="https://mini.webtrigon.com/templates/?package=Professional">Categories</a>
             <a href="https://webtrigon.com/contact/">Contact</a>
+            <img src="https://img.icons8.com/material-rounded/24/000000/delete-sign.png"/>
         </nav>
 
     </nav>
 
     <main>
 
-        <section>
+        <section class="upfold">
 
-            <!--  -->
-            <header>
-                <h1>Starting to digitilize from ground-zero</h1>
-            </header>
+            <h1>Starting to <span>digitilize</span> from ground-zero</h1>
 
-            <!--  -->
-            <div>
+            <div class="upfold-image">
                 <img 
+                class="bg1"
                 src="https://mini.webtrigon.com/static-v1.1.0/home/images/animation-components/upfold-bg-2.png" 
                 alt="">
 
                 <img 
+                class="bg2"
                 src="https://mini.webtrigon.com/static-v1.1.0/home/images/animation-components/upfold-bg-3.png" 
                 alt="">
 
-                <img 
+                <img
+                class="bg3"
                 src="https://mini.webtrigon.com/static-v1.1.0/home/images/animation-components/upfold-bg-4.png" 
                 alt="">
 
-                <svg></svg>
-                <svg></svg>
+                <!-- <svg></svg>
+                <svg></svg> -->
 
-                <img 
+                <img
+                class="bg4" 
                 src="https://mini.webtrigon.com/static-v1.1.0/home/images/animation-components/lights.png" 
                 alt="">
-                
             </div>
 
             <form action="">
-                <input type="text">
-                <img src="https://mini.webtrigon.com/static-v1.1.0/home/images/svg/search-icon.svg" alt="search-icon">
+                <input type="text" placeholder="Search for your business template..">
+                <!--  -->
+                <figure>
+                    <img src="https://mini.webtrigon.com/static-v1.1.0/home/images/svg/search-icon.svg" alt="search-icon">
+                </figure>
             </form>
 
         </section>
 
-        <section>
+        <section class="all-template">
 
             <p>start-up, department stores, miniature shops, and you name it.</p>
             <div>We have you covered!</div>
@@ -83,19 +88,21 @@
 
         </section>
 
-        <section>
+        <section class="step-1">
 
-            <h3>How it works</h3>
+            <h3>How it <span>works?</span></h3>
 
             <section>
 
                 <h4>1. Select template of yout choice</h4>
                 
-                <img 
+                <img
+                class="tablet-icon icon" 
                 src="https://mini.webtrigon.com/static-v1.1.0/home/images/png/tablet.png" 
                 alt="tablet-icon">
 
                 <img 
+                class="laptop-icon icon" 
                 src="https://mini.webtrigon.com/static-v1.1.0/home/images/png/laptop.png" 
                 alt="laptop-icon">
 
@@ -118,10 +125,12 @@
                 </figure>
 
                 <img 
+                class="mobile-icon icon" 
                 src="https://mini.webtrigon.com/static-v1.1.0/home/images/png/phone.png" 
                 alt="mobile-icon">
 
                 <img 
+                class="desktop-icon icon" 
                 src="https://mini.webtrigon.com/static-v1.1.0/home/images/png/desktop.png" 
                 alt="desktop-icon">
 
@@ -339,4 +348,5 @@
     </footer>
 
 </body>
+<script src="index.js"></script>
 </html>
