@@ -264,6 +264,9 @@ header .navigation-links a {
   font-size: 2.5rem;
 }
 .steps .step-1 {
+  position: relative;
+  height: 120vh;
+  overflow: hidden;
   margin-bottom: 5rem;
 }
 .steps .step-1 h4 {
@@ -316,7 +319,7 @@ header .navigation-links a {
   align-self: center;
   margin: 0 auto;
 }
-.steps .step-1 div .sample-image-1 {
+.steps .step-1 div .laptop-icon + figure {
   position: absolute;
   z-index: 1;
   width: 50%;
@@ -324,10 +327,10 @@ header .navigation-links a {
   transform: translate(5%, 10%) scale(0.8);
   overflow: hidden;
 }
-.steps .step-1 div .sample-image-1 img {
+.steps .step-1 div .laptop-icon + figure img {
   width: 100%;
 }
-.steps .step-1 div .sample-image-2 {
+.steps .step-1 div .laptop-icon + figure + figure {
   position: absolute;
   z-index: 2;
   width: 50%;
@@ -335,10 +338,10 @@ header .navigation-links a {
   transform: translate(50%, 40%) scale(0.8);
   overflow: hidden;
 }
-.steps .step-1 div .sample-image-2 img {
+.steps .step-1 div .laptop-icon + figure + figure img {
   width: 100%;
 }
-.steps .step-1 div .sample-image-3 {
+.steps .step-1 div .laptop-icon + figure + figure + figure {
   position: absolute;
   z-index: 1;
   width: 50%;
@@ -346,7 +349,7 @@ header .navigation-links a {
   transform: translate(95%, 75%) scale(0.8);
   overflow: hidden;
 }
-.steps .step-1 div .sample-image-3 img {
+.steps .step-1 div .laptop-icon + figure + figure + figure img {
   width: 100%;
 }
 .steps .step-1 div .tick-icon {
@@ -381,6 +384,9 @@ header .navigation-links a {
   border-radius: 50%;
   right: 30rem;
   bottom: 5.2rem;
+}
+.steps .step-2 {
+  margin-bottom: 5rem;
 }
 .steps .step-2 h4 {
   width: 90%;
@@ -446,6 +452,10 @@ header .navigation-links a {
   right: 31.5rem;
   bottom: 5.5rem;
 }
+.steps .step-3 {
+  height: auto;
+  margin-bottom: 5rem;
+}
 .steps .step-3 h4 {
   width: 90%;
   margin: 0 auto;
@@ -454,11 +464,12 @@ header .navigation-links a {
 .steps .step-3 div {
   position: relative;
   height: 94vh;
+  display: flex;
 }
 .steps .step-3 div figure:nth-child(1) {
-  width: 85%;
   position: absolute;
   left: 7.5%;
+  width: 85%;
   top: 12vh;
 }
 .steps .step-3 div figure:nth-child(1) img {

@@ -335,9 +335,9 @@ header {
     // section 
     .step-1 {
 
-        // position: relative;
-        // height: 120vh;
-        // overflow: hidden;
+        position: relative;
+        height: 120vh;
+        overflow: hidden;
         margin-bottom: 5rem;
 
         h4 {
@@ -415,20 +415,7 @@ header {
                 }
             }
 
-            // figure:nth-child(1){
-            //     position: absolute;
-            //     z-index: 1;
-            //     width: 50%;
-            //     height: 46%;
-            //     transform: translate(5%, 10%) scale(0.8);
-            //     // margin-top: 105rem;
-            //     overflow: hidden;
-            //     display: none;
-            //     img {
-            //         width: 100%;
-            //     }
-            // }
-            .sample-image-1 {
+            .laptop-icon + figure {
                 position: absolute;
                 z-index: 1;
                 width: 50%;
@@ -442,21 +429,7 @@ header {
                 }
             }
 
-            // figure:nth-child(2) {
-            //     position: absolute;
-            //     z-index: 2;
-            //     width: 50%;
-            //     height: 46%;
-            //     transform: translate(50%, 40%) scale(0.8);
-            //     // margin-top: 5rem;
-            //     overflow: hidden;
-    
-            //     img {
-            //         width: 100%;
-            //     }
-            // }
-    
-            .sample-image-2 {
+            .laptop-icon + figure + figure {
                 position: absolute;
                 z-index: 2;
                 width: 50%;
@@ -470,21 +443,7 @@ header {
                 }
             }
 
-            // figure:nth-child(3) {
-            //     position: absolute;
-            //     z-index: 1;
-            //     width: 50%;
-            //     height: 46%;
-            //     transform: translate(95%, 75%) scale(0.8);
-            //     // margin-top: 5rem;
-            //     overflow: hidden;
-    
-            //     img {
-            //         width: 100%;
-            //     }
-            // }
-    
-            .sample-image-3 {
+            .laptop-icon + figure + figure + figure {
                 position: absolute;
                 z-index: 1;
                 width: 50%;
@@ -497,6 +456,48 @@ header {
                     width: 100%;
                 }
             }
+
+            // .sample-image-1 {
+            //     position: absolute;
+            //     z-index: 1;
+            //     width: 50%;
+            //     height: 46%;
+            //     transform: translate(5%, 10%) scale(0.8);
+            //     // margin-top: 5rem
+            //     overflow: hidden;
+    
+            //     img {
+            //         width: 100%;
+            //     }
+            // }
+    
+            // .sample-image-2 {
+            //     position: absolute;
+            //     z-index: 2;
+            //     width: 50%;
+            //     height: 46%;
+            //     transform: translate(50%, 40%) scale(0.8);
+            //     // margin-top: 5rem;
+            //     overflow: hidden;
+    
+            //     img {
+            //         width: 100%;
+            //     }
+            // }
+    
+            // .sample-image-3 {
+            //     position: absolute;
+            //     z-index: 1;
+            //     width: 50%;
+            //     height: 46%;
+            //     transform: translate(95%, 75%) scale(0.8);
+            //     // margin-top: 5rem;
+            //     overflow: hidden;
+    
+            //     img {
+            //         width: 100%;
+            //     }
+            // }
             
             .tick-icon {
                 position: absolute;
@@ -542,6 +543,8 @@ header {
     }
 
     .step-2 {
+
+        margin-bottom: 5rem;
  
         h4 {
             width: 90%;
@@ -629,6 +632,9 @@ header {
 
     .step-3 {
 
+        height: auto;
+        margin-bottom: 5rem;
+
         h4 {
             width: 90%;
             margin: 0 auto;
@@ -638,11 +644,12 @@ header {
         div {
             position: relative;
             height: 94vh;
+            display: flex;
 
             figure:nth-child(1) {
-                width: 85%;
                 position: absolute;
                 left: 7.5%;
+                width: 85%;
                 top: 12vh;
 
                 img {
@@ -664,7 +671,7 @@ header {
         }
 
         // .list-3 
-           ul {
+            ul {
             list-style: none;
             width: 80%;
             margin: 0 auto;
