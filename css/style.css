@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap");
 :root {
   line-height: 1.15;
+  font-size: 62.5%;
+  --dynamic-black: #1e1e1e;
+  --pimm: #c45c5d;
+  --chrome-aluminum: #a6a8ab;
 }
 
 * {
@@ -8,10 +12,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  font-size: 62.5%;
 }
 
-nav {
+header {
   height: 7rem;
   width: 100%;
   display: flex;
@@ -21,48 +24,105 @@ nav {
   position: absolute;
   z-index: 6;
 }
-nav .logo {
+header .logo {
   display: flex;
   cursor: pointer;
   text-decoration: none;
   padding-left: 1rem;
   align-self: center;
 }
-nav .logo img {
+header .logo img {
   width: 5rem;
   align-self: center;
 }
-nav .logo span {
+header .logo span {
   display: block;
   font-size: 1.4rem;
   letter-spacing: 0.2rem;
-  color: #1e1e1e;
+  color: var(--dynamic-black);
   align-self: center;
 }
-nav .hamburger-menu {
-  padding-right: 2rem;
-}
-nav .menu-links {
-  display: none;
+header #menu {
   position: absolute;
   top: 0;
+  right: 0;
+  opacity: 0;
+}
+header #menu:checked + label div {
+  transform: rotate(45deg);
+}
+header #menu:checked + label + .navigation-links {
+  opacity: 1;
+}
+header #menu:checked + label div:before {
+  transform: rotate(-90deg) translate(-0.6rem);
+}
+header #menu:checked + label div::after {
+  display: none;
+}
+header .hamburger-menu {
+  text-align: right;
+  align-self: center;
+  width: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  position: relative;
+  z-index: 5;
+  top: -0.2rem;
+}
+header .hamburger-menu div {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 2.2rem;
+  height: 0.2rem;
+  background-color: #4e4e4e;
+  border-radius: 0.5rem;
+  overflow: visible;
+  transition: transform 0.3s;
+}
+header .hamburger-menu div::before {
+  content: "";
+  position: absolute;
+  top: -6px;
   left: 0;
   width: 100%;
-  height: 100vh;
-  padding-top: 10vh;
-  margin-right: 2rem;
-  margin-left: auto;
-  background-color: white;
+  height: 100%;
+  background-color: inherit;
+  transition: transform 0.3s;
 }
-nav .menu-links a {
+header .hamburger-menu div::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background-color: inherit;
+}
+header .navigation-links {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background-color: white;
+  z-index: 2;
+  opacity: 0;
+  padding-top: 10vh;
   display: block;
-  font-size: 1.3rem;
-  letter-spacing: 0.1rem;
+  transition: opacity 0.3s;
+}
+header .navigation-links a {
+  display: block;
   text-decoration: none;
+  color: var(--dynamic-black);
   width: 80%;
   padding: 1.5rem 0;
-  color: #1e1e1e;
+  font-size: 1.3rem;
   margin: 0 auto;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
 .upfold {
@@ -74,7 +134,7 @@ nav .menu-links a {
   position: relative;
 }
 .upfold h1 {
-  color: #a6a8ab;
+  color: var(--chrome-aluminum);
   text-align: center;
   width: 70%;
   margin: 0 auto;
@@ -84,7 +144,7 @@ nav .menu-links a {
   font-size: 2.2rem;
 }
 .upfold h1 span {
-  color: #c45c5d;
+  color: var(--pimm);
   font-size: 2.2rem;
 }
 .upfold .upfold-image {
@@ -92,31 +152,45 @@ nav .menu-links a {
   overflow: hidden;
   position: relative;
 }
-.upfold .upfold-image .bg1 {
+.upfold .upfold-image img:nth-child(1) {
   position: absolute;
   width: 100%;
   z-index: 2;
   bottom: 15%;
 }
-.upfold .upfold-image .bg2 {
+.upfold .upfold-image img:nth-child(2) {
   position: absolute;
   bottom: 18%;
   width: 100%;
   z-index: 3;
 }
-.upfold .upfold-image .bg3 {
+.upfold .upfold-image img:nth-child(3) {
   position: absolute;
   width: 100%;
   bottom: 0%;
   z-index: 4;
 }
-.upfold .upfold-image .bg4 {
+.upfold .upfold-image .grass {
+  position: absolute;
+  z-index: 4;
+  bottom: 12%;
+  height: auto;
+  width: 100%;
+}
+.upfold .upfold-image .shops {
+  position: absolute;
+  bottom: 12%;
+  z-index: 5;
+  width: 100%;
+  height: auto;
+}
+.upfold .upfold-image .lamp {
   position: absolute;
   width: 90%;
   bottom: 12%;
   z-index: 5;
 }
-.upfold form {
+.upfold section {
   width: 88%;
   height: 6rem;
   margin: 9vh auto;
@@ -125,31 +199,31 @@ nav .menu-links a {
   border-radius: 0.5rem;
   display: flex;
 }
-.upfold form input {
+.upfold section input {
   width: 88%;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
   padding-left: 2rem;
   border: 0;
-  color: #a6a8ab;
+  color: var(--chrome-aluminum);
   background-color: transparent;
 }
-.upfold form figure {
-  background-color: #c45c5d;
+.upfold section div {
+  background-color: var(--pimm);
   width: 14%;
   display: flex;
 }
-.upfold form figure img {
+.upfold section div img {
   width: 15px;
   height: 100%;
   margin: 0 auto;
 }
 
 .all-template {
-  background-color: #1e1e1e;
+  background-color: var(--dynamic-black);
   background-image: url("https://mini.webtrigon.com/static-v1.1.0/home/images/png/pattern.png");
   background-position: center;
-  color: #a6a8ab;
+  color: var(--chrome-aluminum);
   font-size: 1.6rem;
   text-align: center;
 }
@@ -174,110 +248,254 @@ nav .menu-links a {
   text-decoration: none;
   color: white;
   padding: 1.3rem 1.8rem;
-  background-color: #c45c5d;
+  background-color: var(--pimm);
   border-radius: 4rem;
 }
 
-.step-1 h3 {
+.steps h3 {
   font-size: 2.5rem;
   text-align: center;
   color: #1b1d1e;
   padding: 4rem 0;
   font-weight: 500;
 }
-.step-1 h3 span {
-  color: #c45c5d;
+.steps h3 span {
+  color: var(--pimm);
   font-size: 2.5rem;
 }
-.step-1 section h4 {
+.steps .step-1 {
+  margin-bottom: 5rem;
+}
+.steps .step-1 h4 {
   font-size: 2rem;
   font-weight: 500;
   text-align: center;
 }
-.step-1 section .icon {
+.steps .step-1 div {
+  position: relative;
+  height: 120vh;
+  overflow: hidden;
+}
+.steps .step-1 div .icon {
   width: 6rem;
   height: 6rem;
   box-shadow: 0rem 0rem 4.5rem 0rem #9f9fa0;
   border-radius: 50%;
   display: flex;
+  position: absolute;
 }
-.step-1 section .tablet-icon {
+.steps .step-1 div .tablet-icon {
   transform: translate(52vw, 7vh);
 }
-.step-1 section .tablet-icon img {
+.steps .step-1 div .tablet-icon img {
   width: 40%;
   margin: 0 auto;
   align-self: center;
 }
-.step-1 section .laptop-icon {
+.steps .step-1 div .laptop-icon {
   transform: translate(78vw, 30vh);
 }
-.step-1 section .laptop-icon img {
+.steps .step-1 div .laptop-icon img {
   align-self: center;
   margin: 0 auto;
   width: 45%;
 }
-.step-1 section .mobile-icon {
+.steps .step-1 div .mobile-icon {
   transform: translate(5vw, 62vh);
 }
-.step-1 section .mobile-icon .img {
+.steps .step-1 div .mobile-icon img {
   align-self: center;
   margin: 0 auto;
   width: 40%;
 }
-.step-1 section .desktop-icon {
+.steps .step-1 div .desktop-icon {
   transform: translate(30vw, 82vh);
 }
-.step-1 section .desktop-icon .img {
+.steps .step-1 div .desktop-icon img {
+  width: 60%;
   align-self: center;
   margin: 0 auto;
-  width: 60%;
 }
-.step-1 section .sample-image-1 {
+.steps .step-1 div .sample-image-1 {
   position: absolute;
+  z-index: 1;
   width: 50%;
   height: 46%;
   transform: translate(5%, 10%) scale(0.8);
+  overflow: hidden;
 }
-.step-1 section .sample-image-1 img {
+.steps .step-1 div .sample-image-1 img {
   width: 100%;
 }
-.step-1 section .sample-image-2 {
+.steps .step-1 div .sample-image-2 {
   position: absolute;
   z-index: 2;
   width: 50%;
   height: 46%;
   transform: translate(50%, 40%) scale(0.8);
+  overflow: hidden;
 }
-.step-1 section .sample-image-2 img {
+.steps .step-1 div .sample-image-2 img {
   width: 100%;
 }
-.step-1 section .sample-image-3 {
+.steps .step-1 div .sample-image-3 {
   position: absolute;
   z-index: 1;
   width: 50%;
   height: 46%;
   transform: translate(95%, 75%) scale(0.8);
+  overflow: hidden;
 }
-.step-1 section .sample-image-3 img {
+.steps .step-1 div .sample-image-3 img {
   width: 100%;
 }
-.step-1 section .tick-icon {
+.steps .step-1 div .tick-icon {
   position: absolute;
   width: 4.5rem;
   left: 43vw;
-  top: 22vh;
+  top: 28vh;
   z-index: 2;
 }
-.step-1 section .tick-icon img {
+.steps .step-1 div .tick-icon img {
   width: 100%;
 }
-
-.step-2 {
-  margin-top: 80rem;
-  left: 43vw;
-  top: 22vh;
-  z-index: 2;
+.steps .step-1 ul {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: -20vh;
+  list-style: none;
+}
+.steps .step-1 ul li {
+  font-size: 1.6rem;
+  padding-left: 2rem;
+  line-height: 1.5;
+  color: #9f9fa0;
+  position: relative;
+}
+.steps .step-1 ul li::before {
+  content: "";
+  height: 1.2rem;
+  width: 1.2rem;
+  position: absolute;
+  background-color: var(--pimm);
+  border-radius: 50%;
+  right: 30rem;
+  bottom: 5.2rem;
+}
+.steps .step-2 h4 {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+.steps .step-2 div {
+  position: relative;
+  height: 94vh;
+}
+.steps .step-2 div figure:nth-child(1) {
+  position: absolute;
+  width: 50%;
+  height: 65vh;
+  transform: translate(5%, 15%) scale(0.8);
+  overflow: hidden;
+}
+.steps .step-2 div figure:nth-child(1) img {
+  width: 100%;
+}
+.steps .step-2 div figure:nth-child(2) {
+  position: absolute;
+  width: 16rem;
+  transform: translate(48vw, 22vh) scale(0.8);
+}
+.steps .step-2 div figure:nth-child(2) img {
+  width: 16rem;
+}
+.steps .step-2 div figure:nth-child(3) {
+  position: absolute;
+  width: 50%;
+  height: 65vh;
+  transform: translate(100%, 57%);
+}
+.steps .step-2 div figure:nth-child(3) img {
+  width: 100%;
+}
+.steps .step-2 div img:nth-child(4) {
+  position: absolute;
+  width: 4.5rem;
+  left: 21vw;
+  top: 12vh;
+}
+.steps .step-2 ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+.steps .step-2 ul li {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: #9f9fa0;
+  line-height: 1.5;
+  position: relative;
+}
+.steps .step-2 ul li::before {
+  content: "";
+  height: 1.2rem;
+  width: 1.2rem;
+  position: absolute;
+  background-color: var(--pimm);
+  border-radius: 50%;
+  right: 31.5rem;
+  bottom: 5.5rem;
+}
+.steps .step-3 h4 {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 2rem;
+}
+.steps .step-3 div {
+  position: relative;
+  height: 94vh;
+}
+.steps .step-3 div figure:nth-child(1) {
+  width: 85%;
+  position: absolute;
+  left: 7.5%;
+  top: 12vh;
+}
+.steps .step-3 div figure:nth-child(1) img {
+  width: 100%;
+}
+.steps .step-3 div figure:nth-child(2) {
+  width: 50%;
+  height: 65vh;
+  margin: 0 auto;
+  margin-top: 16vh;
+  overflow: hidden;
+}
+.steps .step-3 div figure:nth-child(2) img {
+  width: 100%;
+}
+.steps .step-3 ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+.steps .step-3 ul li {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: #9f9fa0;
+  padding-left: 2rem;
+  position: relative;
+}
+.steps .step-3 ul li::before {
+  content: "";
+  background-color: var(--pimm);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  left: -5px;
+  top: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */
