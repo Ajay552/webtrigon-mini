@@ -4,23 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
     <title>Document</title>
 </head>
 <body>
 
     <style>
-        * {
-            box-sizing: border-box;;
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-start;
         }
-        
-    </style>
-    
-    <input type="checkbox" id="menu">
-    <label for="">
-        <div class="patty">
+        .card {
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 0.5rem;
+            transform: translateX(100px);
+            opacity: 0;
+            transition: 150ms;
+            padding: 50px;
+        }
 
-        </div>
-    </label>
+        .card.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    </style>
+
+    <div class="card-container">
+        <div class="card">This is the first card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is card</div>
+        <div class="card">This is the last card</div>
+
+    </div>
 
 </body>
 </html>

@@ -112,6 +112,7 @@ header .navigation-links {
   padding-top: 10vh;
   display: block;
   transition: opacity 0.3s;
+  pointer-events: none;
 }
 header .navigation-links a {
   display: block;
@@ -286,6 +287,7 @@ header .navigation-links a {
   border-radius: 50%;
   display: flex;
   position: absolute;
+  opacity: 0;
 }
 .steps .step-1 div .tablet-icon {
   transform: translate(52vw, 7vh);
@@ -325,6 +327,7 @@ header .navigation-links a {
   width: 50%;
   height: 46%;
   transform: translate(5%, 10%) scale(0.8);
+  opacity: 0;
   overflow: hidden;
 }
 .steps .step-1 div .laptop-icon + figure img {
@@ -347,6 +350,7 @@ header .navigation-links a {
   width: 50%;
   height: 46%;
   transform: translate(95%, 75%) scale(0.8);
+  opacity: 0;
   overflow: hidden;
 }
 .steps .step-1 div .laptop-icon + figure + figure + figure img {
@@ -358,9 +362,18 @@ header .navigation-links a {
   left: 43vw;
   top: 28vh;
   z-index: 2;
+  opacity: 0;
 }
 .steps .step-1 div .tick-icon img {
   width: 100%;
+}
+.steps .step-1 div .icon.fade-in {
+  transition: opacity 0.8s;
+  opacity: 1;
+}
+.steps .step-1 div .card.fade-in {
+  transition: opacity 0.5s;
+  opacity: 1;
 }
 .steps .step-1 ul {
   width: 80%;
@@ -403,6 +416,7 @@ header .navigation-links a {
   height: 65vh;
   transform: translate(5%, 15%) scale(0.8);
   overflow: hidden;
+  opacity: 0;
 }
 .steps .step-2 div figure:nth-child(1) img {
   width: 100%;
@@ -411,6 +425,7 @@ header .navigation-links a {
   position: absolute;
   width: 16rem;
   transform: translate(48vw, 22vh) scale(0.8);
+  opacity: 0;
 }
 .steps .step-2 div figure:nth-child(2) img {
   width: 16rem;
@@ -420,6 +435,7 @@ header .navigation-links a {
   width: 50%;
   height: 65vh;
   transform: translate(100%, 57%);
+  opacity: 0;
 }
 .steps .step-2 div figure:nth-child(3) img {
   width: 100%;
@@ -429,6 +445,10 @@ header .navigation-links a {
   width: 4.5rem;
   left: 21vw;
   top: 12vh;
+}
+.steps .step-2 div .card.fade-in {
+  transition: opacity 0.5s;
+  opacity: 1;
 }
 .steps .step-2 ul {
   list-style: none;
@@ -468,9 +488,11 @@ header .navigation-links a {
 }
 .steps .step-3 div figure:nth-child(1) {
   position: absolute;
+  z-index: 2;
   left: 7.5%;
   width: 85%;
   top: 12vh;
+  opacity: 0;
 }
 .steps .step-3 div figure:nth-child(1) img {
   width: 100%;
@@ -478,12 +500,19 @@ header .navigation-links a {
 .steps .step-3 div figure:nth-child(2) {
   width: 50%;
   height: 65vh;
-  margin: 0 auto;
-  margin-top: 16vh;
+  position: absolute;
+  z-index: 1;
+  transform: translate(50%, 25%);
+  opacity: 0;
   overflow: hidden;
+  box-shadow: 0rem 0rem 4rem 0.5rem #9f9fa0;
 }
 .steps .step-3 div figure:nth-child(2) img {
   width: 100%;
+}
+.steps .step-3 div .card.fade-in {
+  transition: opacity 0.5s;
+  opacity: 1;
 }
 .steps .step-3 ul {
   list-style: none;

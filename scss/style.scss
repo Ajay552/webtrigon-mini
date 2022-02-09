@@ -17,6 +17,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+
 header {
 
     height: 7rem;
@@ -129,6 +131,7 @@ header {
 
         width: 100%;
         position: absolute;
+        // position: ;
         left: 0;
         top: 0;
         height: 100vh;
@@ -138,6 +141,7 @@ header {
         padding-top: 10vh;
         display: block;
         transition: opacity 0.3s;
+        pointer-events: none;
         // margin-left: auto;
 
         a {
@@ -374,11 +378,13 @@ header {
                 // text-align: center;
                 display: flex;
                 position: absolute;
+                opacity: 0;
                 // overflow: hidden;
             }
     
             .tablet-icon {
                 transform: translate(52vw, 7vh);
+                // transition: transform 0.5s;
                 
                 img {
                     width: 40%;
@@ -390,6 +396,7 @@ header {
     
             .laptop-icon {
                 transform: translate(78vw, 30vh);
+                // transition: transform 0.5s;
                 img {
                     align-self: center;
                     margin: 0 auto;
@@ -399,6 +406,7 @@ header {
     
             .mobile-icon {
                 transform: translate(5vw, 62vh);
+                // transition: transform 0.5s;
                 img {
                     align-self: center;
                     margin: 0 auto;
@@ -408,6 +416,7 @@ header {
     
             .desktop-icon {
                 transform: translate(30vw, 82vh);
+                // transition: transform 0.5s;
                 img {
                     width: 60%;
                     align-self: center;
@@ -421,7 +430,9 @@ header {
                 width: 50%;
                 height: 46%;
                 transform: translate(5%, 10%) scale(0.8);
+                // transition: transform 0.5s, opacity 0.5s;
                 // margin-top: 5rem
+                opacity: 0;
                 overflow: hidden;
     
                 img {
@@ -435,6 +446,7 @@ header {
                 width: 50%;
                 height: 46%;
                 transform: translate(50%, 40%) scale(0.8);
+                // transition: transform 0.5s, opacity 0.5s;
                 // margin-top: 5rem;
                 overflow: hidden;
     
@@ -449,6 +461,8 @@ header {
                 width: 50%;
                 height: 46%;
                 transform: translate(95%, 75%) scale(0.8);
+                // transition: transform 0.5s, opacity 0.5s;
+                opacity: 0;
                 // margin-top: 5rem;
                 overflow: hidden;
     
@@ -456,48 +470,6 @@ header {
                     width: 100%;
                 }
             }
-
-            // .sample-image-1 {
-            //     position: absolute;
-            //     z-index: 1;
-            //     width: 50%;
-            //     height: 46%;
-            //     transform: translate(5%, 10%) scale(0.8);
-            //     // margin-top: 5rem
-            //     overflow: hidden;
-    
-            //     img {
-            //         width: 100%;
-            //     }
-            // }
-    
-            // .sample-image-2 {
-            //     position: absolute;
-            //     z-index: 2;
-            //     width: 50%;
-            //     height: 46%;
-            //     transform: translate(50%, 40%) scale(0.8);
-            //     // margin-top: 5rem;
-            //     overflow: hidden;
-    
-            //     img {
-            //         width: 100%;
-            //     }
-            // }
-    
-            // .sample-image-3 {
-            //     position: absolute;
-            //     z-index: 1;
-            //     width: 50%;
-            //     height: 46%;
-            //     transform: translate(95%, 75%) scale(0.8);
-            //     // margin-top: 5rem;
-            //     overflow: hidden;
-    
-            //     img {
-            //         width: 100%;
-            //     }
-            // }
             
             .tick-icon {
                 position: absolute;
@@ -505,11 +477,58 @@ header {
                 left: 43vw;
                 top: 28vh;
                 z-index: 2;
+                opacity: 0;
     
                 img {
                     width: 100%;
                 }
             }
+
+            // @keyframes fadeIn{
+            //     0% {
+            //         opacity: 0;
+            //         transform: translateY(5rem);
+            //     }
+            //     100% {
+            //         opacity: 1;
+            //         // transform: translateY(0%);
+            //         // transform: translateX(95%);
+            //         // transform: scale(0.8);
+            //     }
+            // }
+            
+            // @keyframes fadeIn-1{
+            //     0% {
+            //         opacity: 0;
+            //         transform: translateY(5rem);
+            //     }
+            //     100% {
+            //         opacity: 1;
+            //         transform: translate(95%, 75%) scale(0.8);
+
+            //     }
+            // }
+
+            // .fadeInbottom {
+            //     // -webkit-animation: fadeInTop 1.2s both;
+            //     animation: fadeIn 0.5s both;
+            // }
+            // .fadeInbottom-1 {
+            //     // -webkit-animation: fadeInTop 1.2s both;
+            //     animation: fadeIn-1 0.5s both;
+            // }
+
+            .icon.fade-in {
+                transition: opacity 0.8s;
+                opacity: 1;
+            }
+
+            .card.fade-in {
+                // transform: translateX(0);
+                transition: opacity 0.5s;
+                opacity: 1;
+            }
+           
         }
 
         // .list-1 
@@ -565,6 +584,7 @@ header {
                 height: 65vh;
                 transform: translate(5%, 15%) scale(0.8);
                 overflow: hidden;
+                opacity: 0;
 
                 img {
                     width: 100%;
@@ -575,6 +595,7 @@ header {
                 position: absolute;
                 width: 16rem;
                 transform: translate(48vw, 22vh) scale(0.8);
+                opacity: 0;
                 
                 img {
                     width: 16rem;
@@ -586,7 +607,7 @@ header {
                 width: 50%;
                 height: 65vh;
                 transform: translate(100%, 57%);
-
+                opacity: 0;
                 img {
                     width: 100%;
                 }
@@ -598,6 +619,11 @@ header {
                 width: 4.5rem;
                 left: 21vw;
                 top: 12vh;
+            }
+
+            .card.fade-in {
+                transition: opacity 0.5s;
+                opacity: 1;
             }
         }
 
@@ -648,9 +674,11 @@ header {
 
             figure:nth-child(1) {
                 position: absolute;
+                z-index: 2;
                 left: 7.5%;
                 width: 85%;
                 top: 12vh;
+                opacity: 0;
 
                 img {
                     width: 100%;
@@ -660,14 +688,28 @@ header {
             figure:nth-child(2) {
                 width: 50%;
                 height: 65vh;
-                margin: 0 auto;
-                margin-top: 16vh;
+                position: absolute;
+                z-index: 1;
+                transform: translate(50%, 25%);
+                opacity: 0;
                 overflow: hidden;
-
+                box-shadow: 0rem 0rem 4rem 0.5rem #9f9fa0;
                 img {
                     width: 100%;
                 }
             }
+
+            .card.fade-in {
+                transition: opacity 0.5s;
+                opacity: 1;
+            }
+
+            // .card-1.fade-up {
+            //     opacity: 1;
+            //     // transform: translateX(0);
+            //     transform: translate(50%, 25%);
+            //     transition: opacity 1s;
+            // }
         }
 
         // .list-3 
