@@ -84,7 +84,7 @@ header .hamburger-menu div {
 header .hamburger-menu div::before {
   content: "";
   position: absolute;
-  top: -6px;
+  top: -0.6rem;
   left: 0;
   width: 100%;
   height: 100%;
@@ -94,7 +94,7 @@ header .hamburger-menu div::before {
 header .hamburger-menu div::after {
   content: "";
   position: absolute;
-  top: 6px;
+  top: 0.6rem;
   left: 0;
   width: 60%;
   height: 100%;
@@ -102,17 +102,18 @@ header .hamburger-menu div::after {
 }
 header .navigation-links {
   width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
   height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
   background-color: white;
-  z-index: 2;
   opacity: 0;
   padding-top: 10vh;
   display: block;
   transition: opacity 0.3s;
   pointer-events: none;
+  overflow: hidden;
 }
 header .navigation-links a {
   display: block;
@@ -122,8 +123,11 @@ header .navigation-links a {
   padding: 1.5rem 0;
   font-size: 1.3rem;
   margin: 0 auto;
-  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
   cursor: pointer;
+}
+header .navigation-links a:nth-child(1) {
+  color: #c45c5d;
 }
 
 .upfold {
@@ -215,7 +219,7 @@ header .navigation-links a {
   display: flex;
 }
 .upfold section div img {
-  width: 15px;
+  width: 1.5rem;
   height: 100%;
   margin: 0 auto;
 }
@@ -368,7 +372,7 @@ header .navigation-links a {
   width: 100%;
 }
 .steps .step-1 div .icon.fade-in {
-  transition: opacity 0.8s;
+  transition: opacity 0.5s;
   opacity: 1;
 }
 .steps .step-1 div .card.fade-in {
@@ -530,12 +534,302 @@ header .navigation-links a {
 .steps .step-3 ul li::before {
   content: "";
   background-color: var(--pimm);
-  width: 12px;
-  height: 12px;
+  width: 1.2rem;
+  height: 1.2rem;
   border-radius: 50%;
   position: absolute;
-  left: -5px;
-  top: 8px;
+  left: -0.5rem;
+  top: 0.8rem;
+}
+
+.carousel {
+  background-color: #272727;
+}
+.carousel .carousel-image {
+  height: 60vh;
+  display: flex;
+  background-image: repeating-radial-gradient(circle at top, rgba(78, 78, 78, 0.5) 80%, rgba(35, 32, 32, 0.8) 300%), linear-gradient(90deg, black, black);
+}
+.carousel .carousel-image img {
+  width: 60%;
+  align-self: center;
+  margin: 0 auto;
+}
+.carousel article {
+  width: 80%;
+  height: 55vh;
+  margin: 10% auto 0 auto;
+  position: relative;
+}
+.carousel article .dots {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  display: flex;
+}
+.carousel article .dots div:nth-child(1) {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: 0.1rem solid #11a59a;
+}
+.carousel article .dots div:nth-child(2) {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: 0.1rem solid #fba737;
+}
+.carousel article .dots div:nth-child(3) {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: 0.1rem solid #f45526;
+}
+.carousel article .dots div.active {
+  background-color: #fba737;
+}
+.carousel article .carousel-text {
+  list-style: none;
+}
+.carousel article .carousel-text li {
+  opacity: 0;
+}
+.carousel article .carousel-text li h5 {
+  color: white;
+  margin-top: 3.5rem;
+  font-size: 2rem;
+}
+.carousel article .carousel-text li p {
+  color: #9f9fa0;
+  line-height: 1.8;
+  font-size: 1.4rem;
+  height: 18rem;
+  margin: 1.4rem 0;
+}
+.carousel article .carousel-text li.activeCarousel {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: transform 2s;
+  transition: opacity 2s;
+}
+
+.quotes .quote-image {
+  width: 5rem;
+  margin: 5rem auto;
+}
+.quotes .quote-image img {
+  width: 100%;
+}
+.quotes .quote {
+  width: 90%;
+  margin: 0 auto;
+  list-style: none;
+}
+.quotes .quote li {
+  opacity: 0;
+}
+.quotes .quote li p {
+  color: #9f9fa0;
+  text-align: center;
+  line-height: 1.7;
+  font-size: 1.4rem;
+  width: 100%;
+}
+.quotes .quote li.activeQuote {
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+.authors {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5rem 0 0 0;
+  display: flex;
+}
+.authors div {
+  display: inline-flex;
+  width: 70px;
+  margin: 10px 0;
+  transition: width 0.5s, filter 0.5s;
+  filter: grayscale(100%);
+}
+.authors div img {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.authors div span:nth-child(1) {
+  display: block;
+  align-self: center;
+  overflow: hidden;
+  padding: 0px;
+  width: 0px;
+  font-size: 1.4rem;
+  color: var(--dynamic-black);
+}
+.authors div span:nth-child(2) {
+  display: block;
+  align-self: center;
+  overflow: hidden;
+  padding: 0px;
+  width: 0px;
+  font-size: 1.4rem;
+  color: var(--chrome-aluminum);
+}
+.authors div.activeAuthor {
+  filter: grayscale(0%);
+  width: 20rem;
+  transition: width 0.5s, filter 0.5s;
+  overflow: visible;
+}
+
+footer .footer-template {
+  background-color: white;
+  background-image: url("https://mini.webtrigon.com/static-v1.1.0/common/images/svg/footer-bg1.svg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 105%;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+footer .footer-template h3 {
+  color: #4e4e4e;
+  padding-top: 8rem;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 2.2rem;
+}
+footer .footer-template p {
+  width: 100%;
+  color: #4e4e4e;
+  font-size: 1.3rem;
+  margin: 0 auto;
+  padding: 1rem 5%;
+  background-color: #f3f3f3;
+}
+footer .footer-template button {
+  padding: 3rem 0 6rem 5%;
+  width: 100%;
+  margin-top: -1%;
+  background-color: #f3f3f3;
+  border: none;
+}
+footer .footer-template button a {
+  cursor: pointer;
+  color: white;
+  background-color: #c45c5d;
+  border: 0;
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+  padding: 1.2rem 2rem;
+  text-decoration: none;
+  margin-right: 30rem;
+}
+footer .footer-bottom {
+  padding-top: 5rem;
+  background-color: #f3f3f3;
+  background-image: url("https://mini.webtrigon.com/static-v1.1.0/common/images/svg/footer-bg2.svg");
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #1e1e1e;
+  margin-top: 10%;
+  padding-bottom: 5rem;
+}
+footer .footer-bottom .company {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .footer-bottom .company img {
+  width: 7rem;
+}
+footer .footer-bottom .company h3 {
+  color: white;
+  font-size: 2.2rem;
+  letter-spacing: 0.1rem;
+}
+footer .footer-bottom .footer-links {
+  margin: 4rem 0;
+}
+footer .footer-bottom .footer-links h5 {
+  font-size: 1.6rem;
+  padding: 1.5rem 0;
+  color: white;
+  text-align: center;
+}
+footer .footer-bottom .footer-links nav a {
+  font-size: 1.4rem;
+  display: block;
+  text-decoration: none;
+  color: #9f9fa0;
+  line-height: 2;
+  text-align: center;
+}
+footer .footer-bottom .important-link {
+  margin-bottom: 5rem;
+}
+footer .footer-bottom .important-link h5 {
+  font-size: 1.6rem;
+  padding: 1.5rem 0;
+  color: white;
+  text-align: center;
+}
+footer .footer-bottom .important-link a {
+  font-size: 1.4rem;
+  display: block;
+  text-decoration: none;
+  color: #9f9fa0;
+  line-height: 2;
+  text-align: center;
+}
+footer .footer-bottom .subscribe {
+  text-align: center;
+}
+footer .footer-bottom .subscribe .notify {
+  font-size: 2.2rem;
+  color: white;
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+footer .footer-bottom .subscribe span {
+  font-size: 1.5rem;
+  color: #9f9fa0;
+}
+footer .footer-bottom .subscribe .email-subscribe {
+  margin: 0 auto;
+  position: relative;
+  margin-top: 1.5rem;
+  background-color: #333333;
+  width: 70%;
+  height: 4rem;
+}
+footer .footer-bottom .subscribe .email-subscribe input {
+  width: 80%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  color: #9f9fa0;
+  font-size: 1.4rem;
+}
+footer .footer-bottom .subscribe .email-subscribe button {
+  margin-left: auto;
+  width: 18%;
+  height: 100%;
+  border: 0;
+  background-color: #f89827;
+  position: absolute;
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
