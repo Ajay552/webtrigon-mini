@@ -778,7 +778,6 @@ header {
 
                 @media screen and (min-width: 1023px){
                     width: 90%;
-                    width: 90%;
                     margin: 0 auto;
                     font-size: 1.8rem;
                     margin-top: 2.5rem;
@@ -809,11 +808,25 @@ header {
     .step-2 {
 
         margin-bottom: 5rem;
+
+        @media screen and (min-width: 1023px) {
+            background-image: url("https://mini.webtrigon.com/static-v1.1.0/home/images/png/background-2.png");
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 90vh;
+            display: flex;
+            flex-direction: row-reverse;
+        }
  
         h4 {
             width: 90%;
             margin: 0 auto;
             font-size: 2rem;
+
+            @media screen and (min-width: 1023px) {
+                display: none;
+            }
         
         }
 
@@ -821,6 +834,13 @@ header {
             position: relative;
             height: 94vh;
             // overflow: hidden;
+
+            @media screen and (min-width: 1023px) {
+                width: 50%;
+                align-self: center;
+                height: 100vh;
+
+            }
 
             figure:nth-child(1) {
 
@@ -830,6 +850,13 @@ header {
                 transform: translate(5%, 15%) scale(0.8);
                 overflow: hidden;
                 opacity: 0;
+
+                @media screen and (min-width: 1023px) {
+                    width: 45%;
+                    height: 80vh;
+                    box-shadow: 10px 10px 25px 2px #9f9fa0;
+                    transform: translate(5%, 15%) scale(0.7);
+                }
 
                 img {
                     width: 100%;
@@ -841,6 +868,11 @@ header {
                 width: 16rem;
                 transform: translate(48vw, 22vh) scale(0.8);
                 opacity: 0;
+
+                @media screen and (min-width: 1023px) {
+                    // width: 20rem;
+                    transform: translate(22vw, 27vh) scale(1);
+                }
                 
                 img {
                     width: 16rem;
@@ -853,6 +885,13 @@ header {
                 height: 65vh;
                 transform: translate(100%, 57%);
                 opacity: 0;
+
+                @media screen and (min-width: 1023px) {
+                    width: 45%;
+                    transform: translate(110%, 50%) scale(0.9);
+                    height: 80vh;
+                }
+
                 img {
                     width: 100%;
                 }
@@ -864,6 +903,13 @@ header {
                 width: 4.5rem;
                 left: 21vw;
                 top: 12vh;
+
+                @media screen and (min-width: 1023px) {
+                    left: 9vw;
+                    top: 20vh;
+                }
+
+
             }
 
             .card.fade-in {
@@ -878,12 +924,38 @@ header {
             width: 80%;
             margin: 0 auto;
 
+            @media screen and (min-width: 1023px) {
+                align-self: center;
+                width: 50%;
+                padding-left: 5%;
+            }
+
+            h4 {
+                display: none;
+
+                @media screen and (min-width: 1023px) {
+                    display: block;
+                    font-size: 2.6rem;
+                    text-align: left;
+                    color: var(--black-oak);
+                    margin: 0;
+                }
+            }
+
             li {
                 font-size: 1.6rem;
                 margin-bottom: 2rem;
                 color: #9f9fa0;
                 line-height: 1.5;
                 position: relative;
+
+                @media screen and (min-width: 1023px){
+                    width: 90%;
+                    margin: 0 auto;
+                    font-size: 1.8rem;
+                    margin-top: 2.5rem;
+                    padding-left: 2.5rem;
+                }
 
                 &::before {
                     content: "";
@@ -894,6 +966,12 @@ header {
                     border-radius: 50%;
                     right: 31.5rem;
                     bottom: 5.5rem;
+
+                    @media screen and (min-width: 1023px) {
+                        left: -0.5rem;
+                        top: 1rem;
+                    }
+
                 }
             }
 
@@ -906,16 +984,34 @@ header {
         height: auto;
         margin-bottom: 5rem;
 
+        @media screen and (min-width: 1023px) {
+            display: flex;
+            height: 100vh;
+        }
+
         h4 {
             width: 90%;
             margin: 0 auto;
             font-size: 2rem;
+
+            @media screen and (min-width: 1023px) {
+                display: none;
+            }
         }
 
         div {
             position: relative;
             height: 94vh;
             display: flex;
+
+            @media screen and (min-width: 1023px) {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                height: 90vh;
+                margin-left: 2%;
+                align-self: center;
+            }
 
             figure:nth-child(1) {
                 position: absolute;
@@ -924,6 +1020,11 @@ header {
                 width: 85%;
                 top: 12vh;
                 opacity: 0;
+
+                @media screen and (min-width: 1023px) {
+                    left: 2.5%;
+                    transform: scale(1) translateY(-10%);
+                }
 
                 img {
                     width: 100%;
@@ -939,6 +1040,21 @@ header {
                 opacity: 0;
                 overflow: hidden;
                 box-shadow: 0rem 0rem 4rem 0.5rem #9f9fa0;
+
+                @media screen and (min-width: 1023px) {
+
+                    // transform: translateX(-15%) scale(0.7);
+                    transform: scale(0.7) translateX(-15%);
+                    // transform: scale(0.7) translateX(-10%);
+
+                    align-self: center;
+                    // align-items: center;
+
+                    margin-top: 7vh;
+                    // margin: 0 auto;
+                    height: 80vh;
+                }
+                
                 img {
                     width: 100%;
                 }
@@ -962,6 +1078,24 @@ header {
             list-style: none;
             width: 80%;
             margin: 0 auto;
+
+            @media screen and (min-width: 1023px) {
+                width: 43%;
+                align-self: center;
+            }
+
+            h4 {
+                display: none;
+                
+                @media screen and (min-width: 1023px) {
+                    display: block;
+                    font-size: 2.6rem;
+                    color: var(--black-oak);
+                    text-align: left;
+                    margin: 0;
+                    padding-bottom: 1.5rem;
+                }
+            }
 
             li {
                 font-size: 1.6rem;
