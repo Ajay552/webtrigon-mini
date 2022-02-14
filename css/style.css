@@ -5,6 +5,7 @@
   --dynamic-black: #1e1e1e;
   --pimm: #c45c5d;
   --chrome-aluminum: #a6a8ab;
+  --black-oak: #4e4e4e;
 }
 
 * {
@@ -96,7 +97,7 @@ header .hamburger-menu div {
   position: relative;
   width: 2.2rem;
   height: 0.2rem;
-  background-color: #4e4e4e;
+  background-color: var(--black-oak);
   border-radius: 0.5rem;
   overflow: visible;
   transition: transform 0.3s;
@@ -456,6 +457,12 @@ header .navigation-links a:nth-child(1) {
 @media screen and (min-width: 1023px) {
   .steps .step-1 {
     display: flex;
+    margin: 0 auto;
+    height: 100vh;
+    background-image: url("https://mini.webtrigon.com/static-v1.1.0/home/images/png/background-1.png");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 .steps .step-1 h4 {
@@ -475,10 +482,11 @@ header .navigation-links a:nth-child(1) {
 }
 @media screen and (min-width: 1023px) {
   .steps .step-1 div {
-    width: 80%;
+    width: 50%;
     height: 80vh;
     overflow: visible;
     align-self: center;
+    margin-left: 5%;
   }
 }
 .steps .step-1 div .icon {
@@ -490,8 +498,19 @@ header .navigation-links a:nth-child(1) {
   position: absolute;
   opacity: 0;
 }
+@media screen and (min-width: 1023px) {
+  .steps .step-1 div .icon {
+    width: 7rem;
+    height: 7rem;
+  }
+}
 .steps .step-1 div .tablet-icon {
   transform: translate(52vw, 7vh);
+}
+@media screen and (min-width: 1023px) {
+  .steps .step-1 div .tablet-icon {
+    transform: translate(22vw, -3vh) scale(1);
+  }
 }
 .steps .step-1 div .tablet-icon img {
   width: 40%;
@@ -501,6 +520,11 @@ header .navigation-links a:nth-child(1) {
 .steps .step-1 div .laptop-icon {
   transform: translate(78vw, 30vh);
 }
+@media screen and (min-width: 1023px) {
+  .steps .step-1 div .laptop-icon {
+    transform: translate(42vw, 21vh) scale(1);
+  }
+}
 .steps .step-1 div .laptop-icon img {
   align-self: center;
   margin: 0 auto;
@@ -509,6 +533,11 @@ header .navigation-links a:nth-child(1) {
 .steps .step-1 div .mobile-icon {
   transform: translate(5vw, 62vh);
 }
+@media screen and (min-width: 1023px) {
+  .steps .step-1 div .mobile-icon {
+    transform: translate(0vw, 60vh) scale(1);
+  }
+}
 .steps .step-1 div .mobile-icon img {
   align-self: center;
   margin: 0 auto;
@@ -516,6 +545,11 @@ header .navigation-links a:nth-child(1) {
 }
 .steps .step-1 div .desktop-icon {
   transform: translate(30vw, 82vh);
+}
+@media screen and (min-width: 1023px) {
+  .steps .step-1 div .desktop-icon {
+    transform: translate(22vw, 77vh) scale(1);
+  }
 }
 .steps .step-1 div .desktop-icon img {
   width: 60%;
@@ -531,6 +565,14 @@ header .navigation-links a:nth-child(1) {
   opacity: 0;
   overflow: hidden;
 }
+@media screen and (min-width: 1023px) {
+  .steps .step-1 div .laptop-icon + figure {
+    width: 40%;
+    height: 70vh;
+    transform: translate(5%, -15%) scale(0.7);
+    box-shadow: 10px 7px 25px 3px #9f9fa0;
+  }
+}
 .steps .step-1 div .laptop-icon + figure img {
   width: 100%;
 }
@@ -541,6 +583,14 @@ header .navigation-links a:nth-child(1) {
   height: 46%;
   transform: translate(50%, 40%) scale(0.8);
   overflow: hidden;
+}
+@media screen and (min-width: 1023px) {
+  .steps .step-1 div .laptop-icon + figure + figure {
+    width: 45%;
+    height: 80vh;
+    transform: translate(50%, 5%) scale(0.7);
+    box-shadow: 10px 7px 25px 3px #9f9fa0;
+  }
 }
 .steps .step-1 div .laptop-icon + figure + figure img {
   width: 100%;
@@ -554,6 +604,14 @@ header .navigation-links a:nth-child(1) {
   opacity: 0;
   overflow: hidden;
 }
+@media screen and (min-width: 1023px) {
+  .steps .step-1 div .laptop-icon + figure + figure + figure {
+    width: 40%;
+    height: 65vh;
+    transform: translate(135%, 40%) scale(0.7);
+    box-shadow: 10px 7px 25px 3px #9f9fa0;
+  }
+}
 .steps .step-1 div .laptop-icon + figure + figure + figure img {
   width: 100%;
 }
@@ -564,6 +622,12 @@ header .navigation-links a:nth-child(1) {
   top: 28vh;
   z-index: 2;
   opacity: 0;
+}
+@media screen and (min-width: 1023px) {
+  .steps .step-1 div .tick-icon {
+    left: 21vh;
+    top: 12vh;
+  }
 }
 .steps .step-1 div .tick-icon img {
   width: 100%;
@@ -582,12 +646,40 @@ header .navigation-links a:nth-child(1) {
   margin-top: -20vh;
   list-style: none;
 }
+@media screen and (min-width: 1023px) {
+  .steps .step-1 ul {
+    width: 43%;
+    align-self: center;
+    margin-top: 0;
+  }
+}
+.steps .step-1 ul h4 {
+  display: none;
+}
+@media screen and (min-width: 1023px) {
+  .steps .step-1 ul h4 {
+    display: block;
+    font-size: 2.6rem;
+    color: var(--black-oak);
+    text-align: left;
+  }
+}
 .steps .step-1 ul li {
   font-size: 1.6rem;
   padding-left: 2rem;
   line-height: 1.5;
   color: #9f9fa0;
   position: relative;
+}
+@media screen and (min-width: 1023px) {
+  .steps .step-1 ul li {
+    width: 90%;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    padding-left: 2.5rem;
+  }
 }
 .steps .step-1 ul li::before {
   content: "";
@@ -598,6 +690,12 @@ header .navigation-links a:nth-child(1) {
   border-radius: 50%;
   right: 30rem;
   bottom: 5.2rem;
+}
+@media screen and (min-width: 1023px) {
+  .steps .step-1 ul li::before {
+    left: -0.5rem;
+    top: 1rem;
+  }
 }
 .steps .step-2 {
   margin-bottom: 5rem;
@@ -898,7 +996,7 @@ footer .footer-template {
   margin: 0 auto;
 }
 footer .footer-template h3 {
-  color: #4e4e4e;
+  color: var(--black-oak);
   padding-top: 8rem;
   width: 90%;
   margin: 0 auto;
@@ -906,7 +1004,7 @@ footer .footer-template h3 {
 }
 footer .footer-template p {
   width: 100%;
-  color: #4e4e4e;
+  color: var(--black-oak);
   font-size: 1.3rem;
   margin: 0 auto;
   padding: 1rem 5%;
