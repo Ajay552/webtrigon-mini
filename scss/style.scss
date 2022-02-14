@@ -31,12 +31,25 @@ header {
     z-index: 6;
     // background-color: red;
 
+    @media screen and (min-width: 1023px) {
+        // display: flex;
+        background-color: transparent;
+        height: 9.5rem;
+        top: 0;
+        left: 0;
+
+    }
+
     .logo {
         display: flex;
         cursor: pointer;
         text-decoration: none;
         padding-left: 1rem;
         align-self: center;
+
+        @media screen and (min-width: 1023px) {
+            display: none;
+        }
 
         img {
             width: 5rem;
@@ -58,6 +71,7 @@ header {
         top: 0;
         right: 0;
         opacity: 0;
+        transition: opacity 0.5s;
 
         &:checked + label div {
             // transform: rotate(-90deg) translate(-6px);
@@ -67,6 +81,7 @@ header {
         &:checked + label +.navigation-links {
             opacity: 1;
             // background-color: red;
+            transition: opacity 0.5s;
         }
 
         &:checked + label div:before {
@@ -89,6 +104,10 @@ header {
         position: relative;
         z-index: 5;
         top: -0.2rem;
+
+        @media screen and (min-width: 1023px) {
+            display: none;
+        }
 
         div {
             display: inline-block;
@@ -130,7 +149,7 @@ header {
     .navigation-links {
 
         width: 100%;
-        height: 100vh;
+        // height: 100vh;
         overflow: hidden;
         // position: relative;
         position: absolute;
@@ -147,6 +166,18 @@ header {
         pointer-events: none;
         overflow: hidden;
         // margin-left: auto;
+
+        @media screen and (min-width: 1023px) {
+            display: flex;
+            width: 40%;
+            margin-left: auto;
+            margin-right: 20px;
+            opacity: 1;
+            background-color: transparent;
+            position: static;
+            overflow: visible;
+            padding-top: 0;
+        }
 
         a {
             display: block;
@@ -178,6 +209,12 @@ header {
     overflow: hidden;
     position: relative;
 
+    @media screen and (min-width: 1023px) {
+        width: 65%;
+        height: 100vh;
+        margin-left: 35%;
+    }
+
     h1 {
         color: var(--chrome-aluminum);
         text-align: center;
@@ -187,6 +224,10 @@ header {
         padding-top: 15vh;
         padding-bottom: 7vh;
         font-size: 2.2rem;
+
+        @media screen and (min-width: 1023px) {
+            display: none;
+        }
 
         span {
             color: var(--pimm);
@@ -198,16 +239,22 @@ header {
         height: 40vh;
         overflow: hidden;
         position: relative;
-    
+
+        @media screen and (min-width: 1023px) {
+            height: 80vh;
+        }
+
         // .bg1 
         img:nth-child(1) {
     
             position: absolute;
             width: 100%;
             z-index: 2;
-            // left: 0;
             bottom: 15%;
-            // opacity: 0;
+
+            @media screen and (min-width: 1023px) {
+                width: 100%;
+            }
     
         }
         // .bg2 
@@ -216,6 +263,10 @@ header {
             bottom: 18%;
             width: 100%;
             z-index: 3;
+            @media screen and (min-width: 1023px) {
+                width: 100%;
+            }
+    
         }
         // .bg3 
         img:nth-child(3){
@@ -223,6 +274,10 @@ header {
             width: 100%;
             bottom: 0%;
             z-index: 4;
+            @media screen and (min-width: 1023px) {
+                width: 100%;
+            }
+    
         }
 
         .grass {
@@ -231,6 +286,10 @@ header {
             bottom: 12%;
             height: auto;
             width: 100%;
+            @media screen and (min-width: 1023px) {
+                width: 100%;
+            }
+    
         }
 
         .shops {
@@ -239,6 +298,10 @@ header {
             z-index: 5;
             width: 100%;
             height: auto;
+            @media screen and (min-width: 1023px) {
+                width: 100%;
+            }
+    
         }
 
         // .bg4 
@@ -247,6 +310,10 @@ header {
             width: 90%;
             bottom: 12%;
             z-index: 5;
+            @media screen and (min-width: 1023px) {
+                width: 100%;
+            }
+    
         }
     }
 
@@ -259,6 +326,14 @@ header {
         border-radius: 0.5rem;
         display: flex;
 
+        @media screen and (min-width: 1023px) {
+            width: 60%;
+            height: 6.8rem;
+            border-width: 1rem;
+            // margin: 0 auto;
+            margin-top: 2.5%;
+        }
+
         input {
             width: 88%;
             font-size: 1.2rem;
@@ -268,6 +343,10 @@ header {
             color: var(--chrome-aluminum);
             background-color: transparent;
             // height: 100%;
+
+            @media screen and (min-width: 1023px) {
+                font-size: 1.4rem;
+            }
         }
 
         div {
@@ -284,7 +363,7 @@ header {
     }
 }
 
-.all-template {
+.templates {
     background-color: var(--dynamic-black);
     background-image: url("https://mini.webtrigon.com/static-v1.1.0/home/images/png/pattern.png");
     // background-size: 250%;
@@ -293,17 +372,99 @@ header {
     font-size: 1.6rem;
     text-align: center;
 
+    @media screen and (min-width: 1023px) {
+        width: 35%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+    }
+
+    div {
+        display: none;
+        @media screen and (min-width: 1023px) {
+            display: block;
+            margin: 20% auto;
+            width: 80%;
+            text-align: left;
+            display: flex;
+        }
+
+        img {
+            display: none;
+    
+            @media screen and (min-width: 1023px) {
+                display: inline;
+                width: 9rem;
+                // display: inline-block;
+                // margin: 20% 0;
+                // position: relative;
+                // top: 0rem;
+                // right: 2rem;
+                // margin-left: auto;
+                // margin: 0;
+            }
+        }
+        
+        img + div {
+            display: none;
+            @media screen and (min-width: 1023px) {
+                display: inline;
+                letter-spacing: 0.1rem;
+                font-size: 3rem;
+                color: white;
+                margin: 0;
+                align-self: center;
+                // margin-bottom: rem;
+                // position: relative;
+                // top: 0rem;
+                // right: 3rem;
+                // bottom: 10rem;
+                // margin: 20% 0;
+                // margin-right: auto;
+                // margin-bottom: 0rem;
+            }
+        }
+
+    }
+
+    h2 {
+        display: none;
+
+        @media screen and (min-width: 1023px) {
+            display: block;
+            color: white;
+            font-size: 2.5rem;
+            width: 80%;
+            margin: 0 auto;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+    }
+
     p {
         padding: 3rem 0;
         width: 80%;
         margin: 0 auto;
         line-height: 1.5;
         font-size: 1.6rem;
+        @media screen and (min-width: 1023px) {
+            width: 80%;
+            // margin: 0 auto;
+            text-align: left;
+    
+        }
     }
 
-    div {
+    p + div {
         padding-bottom: 2.5rem;
         font-size: 1.6rem;
+        @media screen and (min-width: 1023px) {
+            text-align: left;
+            margin: 0 auto;
+            width: 80%;
+            font-size: 1.8rem;
+        }
     }
 
     button {
@@ -312,6 +473,12 @@ header {
         // border-radius: 4rem;
         border: none;
         background: transparent;
+
+        @media screen and (min-width: 1023px) {
+            width: 80%;
+            text-align: left;
+            margin: 2rem auto;
+        }
 
         a {
             font-size: 1.6rem;
@@ -338,9 +505,16 @@ header {
         padding: 4rem 0;
         font-weight: 500;
 
+        @media screen and (min-width: 1023px) {
+            font-size: 4.5rem;
+        }
+
         span {
             color: var(--pimm);
             font-size: 2.5rem;
+            @media screen and (min-width: 1023px) {
+                font-size: 4.5rem;
+            }
         }
     }
 
@@ -352,10 +526,17 @@ header {
         overflow: hidden;
         margin-bottom: 5rem;
 
+        @media screen and (min-width: 1023px) {
+            display: flex;
+        }
+
         h4 {
             font-size: 2rem;
             font-weight: 500;
             text-align: center;
+            @media screen and (min-width: 1023px) {
+                display: none;
+            }
         }
 
         div {
@@ -363,6 +544,13 @@ header {
             position: relative;
             height: 120vh;
             overflow: hidden;
+
+            @media screen and (min-width: 1023px) {
+                width: 80%;
+                height: 80vh;
+                overflow: visible;
+                align-self: center;
+            }
 
             // figure:nth-child(1){
             //     position: absolute;

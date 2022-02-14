@@ -24,12 +24,25 @@ header {
   position: absolute;
   z-index: 6;
 }
+@media screen and (min-width: 1023px) {
+  header {
+    background-color: transparent;
+    height: 9.5rem;
+    top: 0;
+    left: 0;
+  }
+}
 header .logo {
   display: flex;
   cursor: pointer;
   text-decoration: none;
   padding-left: 1rem;
   align-self: center;
+}
+@media screen and (min-width: 1023px) {
+  header .logo {
+    display: none;
+  }
 }
 header .logo img {
   width: 5rem;
@@ -47,12 +60,14 @@ header #menu {
   top: 0;
   right: 0;
   opacity: 0;
+  transition: opacity 0.5s;
 }
 header #menu:checked + label div {
   transform: rotate(45deg);
 }
 header #menu:checked + label + .navigation-links {
   opacity: 1;
+  transition: opacity 0.5s;
 }
 header #menu:checked + label div:before {
   transform: rotate(-90deg) translate(-0.6rem);
@@ -69,6 +84,11 @@ header .hamburger-menu {
   position: relative;
   z-index: 5;
   top: -0.2rem;
+}
+@media screen and (min-width: 1023px) {
+  header .hamburger-menu {
+    display: none;
+  }
 }
 header .hamburger-menu div {
   display: inline-block;
@@ -102,7 +122,6 @@ header .hamburger-menu div::after {
 }
 header .navigation-links {
   width: 100%;
-  height: 100vh;
   overflow: hidden;
   position: absolute;
   left: 0rem;
@@ -114,6 +133,19 @@ header .navigation-links {
   transition: opacity 0.3s;
   pointer-events: none;
   overflow: hidden;
+}
+@media screen and (min-width: 1023px) {
+  header .navigation-links {
+    display: flex;
+    width: 40%;
+    margin-left: auto;
+    margin-right: 20px;
+    opacity: 1;
+    background-color: transparent;
+    position: static;
+    overflow: visible;
+    padding-top: 0;
+  }
 }
 header .navigation-links a {
   display: block;
@@ -138,6 +170,13 @@ header .navigation-links a:nth-child(1) {
   overflow: hidden;
   position: relative;
 }
+@media screen and (min-width: 1023px) {
+  .upfold {
+    width: 65%;
+    height: 100vh;
+    margin-left: 35%;
+  }
+}
 .upfold h1 {
   color: var(--chrome-aluminum);
   text-align: center;
@@ -148,6 +187,11 @@ header .navigation-links a:nth-child(1) {
   padding-bottom: 7vh;
   font-size: 2.2rem;
 }
+@media screen and (min-width: 1023px) {
+  .upfold h1 {
+    display: none;
+  }
+}
 .upfold h1 span {
   color: var(--pimm);
   font-size: 2.2rem;
@@ -157,11 +201,21 @@ header .navigation-links a:nth-child(1) {
   overflow: hidden;
   position: relative;
 }
+@media screen and (min-width: 1023px) {
+  .upfold .upfold-image {
+    height: 80vh;
+  }
+}
 .upfold .upfold-image img:nth-child(1) {
   position: absolute;
   width: 100%;
   z-index: 2;
   bottom: 15%;
+}
+@media screen and (min-width: 1023px) {
+  .upfold .upfold-image img:nth-child(1) {
+    width: 100%;
+  }
 }
 .upfold .upfold-image img:nth-child(2) {
   position: absolute;
@@ -169,11 +223,21 @@ header .navigation-links a:nth-child(1) {
   width: 100%;
   z-index: 3;
 }
+@media screen and (min-width: 1023px) {
+  .upfold .upfold-image img:nth-child(2) {
+    width: 100%;
+  }
+}
 .upfold .upfold-image img:nth-child(3) {
   position: absolute;
   width: 100%;
   bottom: 0%;
   z-index: 4;
+}
+@media screen and (min-width: 1023px) {
+  .upfold .upfold-image img:nth-child(3) {
+    width: 100%;
+  }
 }
 .upfold .upfold-image .grass {
   position: absolute;
@@ -182,6 +246,11 @@ header .navigation-links a:nth-child(1) {
   height: auto;
   width: 100%;
 }
+@media screen and (min-width: 1023px) {
+  .upfold .upfold-image .grass {
+    width: 100%;
+  }
+}
 .upfold .upfold-image .shops {
   position: absolute;
   bottom: 12%;
@@ -189,11 +258,21 @@ header .navigation-links a:nth-child(1) {
   width: 100%;
   height: auto;
 }
+@media screen and (min-width: 1023px) {
+  .upfold .upfold-image .shops {
+    width: 100%;
+  }
+}
 .upfold .upfold-image .lamp {
   position: absolute;
   width: 90%;
   bottom: 12%;
   z-index: 5;
+}
+@media screen and (min-width: 1023px) {
+  .upfold .upfold-image .lamp {
+    width: 100%;
+  }
 }
 .upfold section {
   width: 88%;
@@ -204,6 +283,14 @@ header .navigation-links a:nth-child(1) {
   border-radius: 0.5rem;
   display: flex;
 }
+@media screen and (min-width: 1023px) {
+  .upfold section {
+    width: 60%;
+    height: 6.8rem;
+    border-width: 1rem;
+    margin-top: 2.5%;
+  }
+}
 .upfold section input {
   width: 88%;
   font-size: 1.2rem;
@@ -212,6 +299,11 @@ header .navigation-links a:nth-child(1) {
   border: 0;
   color: var(--chrome-aluminum);
   background-color: transparent;
+}
+@media screen and (min-width: 1023px) {
+  .upfold section input {
+    font-size: 1.4rem;
+  }
 }
 .upfold section div {
   background-color: var(--pimm);
@@ -224,7 +316,7 @@ header .navigation-links a:nth-child(1) {
   margin: 0 auto;
 }
 
-.all-template {
+.templates {
   background-color: var(--dynamic-black);
   background-image: url("https://mini.webtrigon.com/static-v1.1.0/home/images/png/pattern.png");
   background-position: center;
@@ -232,23 +324,100 @@ header .navigation-links a:nth-child(1) {
   font-size: 1.6rem;
   text-align: center;
 }
-.all-template p {
+@media screen and (min-width: 1023px) {
+  .templates {
+    width: 35%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+  }
+}
+.templates div {
+  display: none;
+}
+@media screen and (min-width: 1023px) {
+  .templates div {
+    display: block;
+    margin: 20% auto;
+    width: 80%;
+    text-align: left;
+    display: flex;
+  }
+}
+.templates div img {
+  display: none;
+}
+@media screen and (min-width: 1023px) {
+  .templates div img {
+    display: inline;
+    width: 9rem;
+  }
+}
+.templates div img + div {
+  display: none;
+}
+@media screen and (min-width: 1023px) {
+  .templates div img + div {
+    display: inline;
+    letter-spacing: 0.1rem;
+    font-size: 3rem;
+    color: white;
+    margin: 0;
+    align-self: center;
+  }
+}
+.templates h2 {
+  display: none;
+}
+@media screen and (min-width: 1023px) {
+  .templates h2 {
+    display: block;
+    color: white;
+    font-size: 2.5rem;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.5;
+    text-align: left;
+  }
+}
+.templates p {
   padding: 3rem 0;
   width: 80%;
   margin: 0 auto;
   line-height: 1.5;
   font-size: 1.6rem;
 }
-.all-template div {
+@media screen and (min-width: 1023px) {
+  .templates p {
+    width: 80%;
+    text-align: left;
+  }
+}
+.templates p + div {
   padding-bottom: 2.5rem;
   font-size: 1.6rem;
 }
-.all-template button {
+@media screen and (min-width: 1023px) {
+  .templates p + div {
+    text-align: left;
+    margin: 0 auto;
+    width: 80%;
+    font-size: 1.8rem;
+  }
+}
+.templates button {
   padding: 2rem 0 5rem 0;
   border: none;
   background: transparent;
 }
-.all-template button a {
+@media screen and (min-width: 1023px) {
+  .templates button {
+    width: 80%;
+    text-align: left;
+    margin: 2rem auto;
+  }
+}
+.templates button a {
   font-size: 1.6rem;
   text-decoration: none;
   color: white;
@@ -264,9 +433,19 @@ header .navigation-links a:nth-child(1) {
   padding: 4rem 0;
   font-weight: 500;
 }
+@media screen and (min-width: 1023px) {
+  .steps h3 {
+    font-size: 4.5rem;
+  }
+}
 .steps h3 span {
   color: var(--pimm);
   font-size: 2.5rem;
+}
+@media screen and (min-width: 1023px) {
+  .steps h3 span {
+    font-size: 4.5rem;
+  }
 }
 .steps .step-1 {
   position: relative;
@@ -274,15 +453,33 @@ header .navigation-links a:nth-child(1) {
   overflow: hidden;
   margin-bottom: 5rem;
 }
+@media screen and (min-width: 1023px) {
+  .steps .step-1 {
+    display: flex;
+  }
+}
 .steps .step-1 h4 {
   font-size: 2rem;
   font-weight: 500;
   text-align: center;
 }
+@media screen and (min-width: 1023px) {
+  .steps .step-1 h4 {
+    display: none;
+  }
+}
 .steps .step-1 div {
   position: relative;
   height: 120vh;
   overflow: hidden;
+}
+@media screen and (min-width: 1023px) {
+  .steps .step-1 div {
+    width: 80%;
+    height: 80vh;
+    overflow: visible;
+    align-self: center;
+  }
 }
 .steps .step-1 div .icon {
   width: 6rem;
